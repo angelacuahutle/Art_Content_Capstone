@@ -7,6 +7,9 @@ RSpec.describe User, type: :model do
   end
 
   describe 'assocations' do
-
+    it do
+      should have_many(:artilces)
+      should have_many(:votes)
+    end
   end
 end

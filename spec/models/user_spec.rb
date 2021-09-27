@@ -6,10 +6,8 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:name).is_at_most(20) }
   end
 
-  describe 'assocations' do
-    it do
-      should have_many(:articles)
-      should have_many(:votes)
-    end
+  describe 'associations' do
+    it {should have_many(:articles)}
+    it {should have_many(:votes)}
   end
 end

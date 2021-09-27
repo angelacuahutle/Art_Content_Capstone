@@ -1,3 +1,10 @@
 <h1>Art Content</h1>
 
 <p>Hola Amigx!</p>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+    </li>
+  <% end %>
+</ul>  

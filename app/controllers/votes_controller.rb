@@ -1,68 +1,12 @@
 class VotesController < ApplicationController
   before_action :set_vote, only: %i[ show edit update destroy ]
-
-  # GET /votes or /votes.json
-  def index
-    @votes = Vote.all
-  end
-
-  # GET /votes/1 or /votes/1.json
-  def show
-  end
-
-  # GET /votes/new
-  def new
-    @vote = Vote.new
-  end
-
-  # GET /votes/1/edit
-  def edit
-  end
-
-  # POST /votes or /votes.json
   def create
-    @vote = Vote.new(vote_params)
-
-    respond_to do |format|
-      if @vote.save
-        format.html { redirect_to @vote, notice: "Vote was successfully created." }
-        format.json { render :show, status: :created, location: @vote }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @vote.errors, status: :unprocessable_entity }
-      end
-    end
+    @vote = @current_user.votes.new(article_id: params[:article_id])
+    redirect_to request.referrer, notice: 'You voted for an article' if @vote.save
   end
 
-  # PATCH/PUT /votes/1 or /votes/1.json
-  def update
-      if @vote.update(vote_params) 
-        do |format|
-        format.html { redirect_to @vote, notice: "Vote was successfully updated." }
-        format.json { render :show, status: :ok, location: @vote }
-        else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @vote.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /votes/1 or /votes/1.json
   def destroy
-    if @vote.destroy do |format|
-      format.html { redirect_to votes_url, notice: "Vote was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    @vote = Vote.find_by(id: params[:id], author: @current_user, article_id: params[:article_id])
+    redirect_to request.referrer, notice: 'You unvoted an article' if @vote.destroy
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_vote
-      @vote = Vote.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def vote_params
-      params.require(:vote).permit(:user_id, :article_id)
-    end
 end

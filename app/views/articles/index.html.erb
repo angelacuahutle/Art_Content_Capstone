@@ -8,3 +8,15 @@
   <% end %>
 </div>
 
+  <div class="landing-grid">
+    <% @categories.each do |category| %>
+      <div class='category-articles'
+            style="background-image: linear-gradient(rgba(232, 199, 192,.1), rgba(232, 199, 192,.1)), url(<%= latest_article_cover(category) %>);">
+        <div class="d-flex flex-column">
+          <%= link_to category.name, category_path(category), class:'category-style pt-2 simple-link text-uppercase' %>
+          <span><%= article_by_category(category) %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+

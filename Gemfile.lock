@@ -80,6 +80,8 @@ GEM
     faker (2.19.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.4)
+    figaro (1.2.0)
+      thor (>= 0.14.0, < 2)
     globalid (0.5.2)
       activesupport (>= 5.0)
     i18n (1.8.10)
@@ -236,6 +238,7 @@ DEPENDENCIES
   byebug
   devise (~> 4.8)
   faker (~> 2.19)
+  figaro
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)

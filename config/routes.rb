@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :votes
-  resources :categories
+  root "articles#index"
   devise_for :users
-    root "articles#index"
-    get "/articles", to: "articles#index"
+  resources :categories
+  resources :articles do
+    resource :vote, only: %w[create destroy]  
   end
+end

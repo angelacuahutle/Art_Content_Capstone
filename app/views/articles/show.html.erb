@@ -10,7 +10,7 @@
     <% end %>
 
     <div class="d-flex flex-column">
-      <%= content_tag :p, markdown(@article.text), class: 'article-text' %>
+      <%= content_tag :p, @article.body, class: 'article-text' %>
     </div>
 
     <% if @current_user == @article.author %>

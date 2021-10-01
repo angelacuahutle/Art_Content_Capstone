@@ -4,5 +4,5 @@ class Article < ApplicationRecord
   has_many :categories
   validates :title, presence: true
   validates :body, presence: true
-  # has_one_attached :image
+  has_one_attached :image
 end

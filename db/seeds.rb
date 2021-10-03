@@ -27,15 +27,15 @@ User.all.each do |author|
   )
 end
 
-# Article.all.each do |art|
-#   rand_img = 1 + rand(14)
-#   art.image.attach(
-#     # https://stackoverflow.com/questions/55027846/how-to-seed-database-from-s3-in-a-ror-app
-#     io: File.open("app/assets/images/#{rand_img}.jpg"),
-#     filename: "#{rand_img}.jpg"
-#   )
-#   art.save
-# end
+ Article.all.each do |art|
+   rand_img = 1 + rand(14)
+   art.image.attach(
+     # https://stackoverflow.com/questions/55027846/how-to-seed-database-from-s3-in-a-ror-app
+     io: File.open("app/assets/images/#{rand_img}.jpg"),
+     filename: "#{rand_img}.jpg"
+   )
+   art.save
+ end
 
 # 60.times do
 #   rand_usr = User.all.sample

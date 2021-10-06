@@ -31,11 +31,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.8'
 # Manage secrets
 gem 'figaro'
+# create data for database
+gem 'faker', '~> 2.19'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker', '~> 2.19'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 5.0'

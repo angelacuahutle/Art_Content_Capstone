@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-Check out the Heroku development deployment [here](https://)
+Check out the Heroku development deployment [here](https://aqueous-meadow-00203.herokuapp.com/users/sign_in)
 
 
 ## Getting Started

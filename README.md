@@ -85,4 +85,4 @@ Give a ⭐️ and share if you like this project!
 
 ## 📝 License
 
-This project is based on [Creative Commons](
+This project is based on [MIT](./LICENSE)

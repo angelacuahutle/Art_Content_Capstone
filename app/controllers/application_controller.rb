@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     flash[:alert] = 'Please login!'
-    redirect_to sessions_path if session[:id].nil?
+    redirect_to new_user_session_path if session[:id].nil?
   end
 
   def create_categories_buttons

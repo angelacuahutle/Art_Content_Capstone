@@ -1,19 +1,20 @@
 <p id="notice" class="m-0 p-0"><%= notice %></p>
 <div class="row categories-container m-0 p-0">
-  <% @categories.each_with_index do |cat,i| %>
+  <% @limited_articles_by_category.each_with_index do |art,i| %>
     <div class="col-3 m-0 p-0">
-      <%= top_img(cat,i) %>
+      <%= top_img(art,i) %>
       <div class="half">
         <div class="d-flex flex-column">
           <div class="d-flex m-2 p-2 flex-column">
             <%= content_tag :p, @category.name %>
-            <%= content_tag :h2, cat.title %>
-            <%= read_more(cat) %>
-            <%= link_to 'Edit', edit_category_path(@category) %>
+            <%= content_tag :h2, art.title %>
+            <%= read_more(art) %>
+            <%= edit_if_owner(art) %>
+         
           </div>
         </div>
       </div>
-      <%= bottom_img(cat,i) %>
+      <%= bottom_img(art,i) %>
     </div>
   <% end %>
 </div>

@@ -1,5 +1,7 @@
 # Changes addresed!
 
+Please use the credentials for AWS given in the Microverse form as the updated README states.
+
 ## Tests
 
 - [] Test controllers

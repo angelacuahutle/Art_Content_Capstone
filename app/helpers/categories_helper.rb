@@ -22,4 +22,9 @@ module CategoriesHelper
   def read_more(art)
     art.try { |a| a.body.truncate(150, separator: ' ', omission: '... To be continued.') }
   end
+
+  def edit_if_owner(article)
+    link_to 'Edit', edit_article_path(article) if current_user == article.author
+  end
+
 end

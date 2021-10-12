@@ -12,7 +12,7 @@
 ## Views
 
 - [] Modify footer
-- [] Display votes of each article
-- [] Name of author in the article
+- [x] Display votes of each article
+- [x] Name of author in the article
 - [] Remove logic from views
 - [] Add extra feature

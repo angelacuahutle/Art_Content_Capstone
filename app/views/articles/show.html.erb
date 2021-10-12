@@ -2,7 +2,7 @@
 <div class="container">
   <div class="d-flex flex-column">
     <%= content_tag :h2, @article.title, class: 'article-title' %>
-
+    <%= "Total votes: #{@article.votes.all.count}" %>
     <%= render partial: "votes" %>
 
     <% if @article.image.attached? %>

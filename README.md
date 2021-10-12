@@ -20,7 +20,6 @@
 
 Check out the Heroku development deployment [here](https://aqueous-meadow-00203.herokuapp.com/users/sign_in)
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -44,9 +43,13 @@ rails db:create db:migrate db:seed
 ### Usage
 
 For local development fire up the server in `localhost:3000` using:
+
 ```
 rails s
 ```
+
+Please add the proper credentials in the ```application.yml``` file. Make sure you don't share these with anyone as these are your private keys to access the project's AWS image features.
+
 ### Test the application
 
 You can make sure everything is fine by using the following command:

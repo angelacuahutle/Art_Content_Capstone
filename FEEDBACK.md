@@ -14,7 +14,7 @@ Please use the credentials for AWS given in the Microverse form as the updated R
 ## Views
 
 - [] Modify footer
+- [] Add extra feature
+- [] Remove logic from views
 - [x] Display votes of each article
 - [x] Name of author in the article
-- [] Remove logic from views
-- [] Add extra feature

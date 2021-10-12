@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def edit_if_owner(article)
+    link_to 'Edit', edit_article_path(article) if current_user == article.author
+  end
+
   def categories_menu(categories)
     categories_displayed = ''
     categories.each do |category|

@@ -59,8 +59,6 @@ rspec
 
 ### Deployment
 
-
-
 ## Authors
 
 👤 **Angela Cuahutle**

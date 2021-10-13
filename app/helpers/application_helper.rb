@@ -1,6 +1,6 @@
 module ApplicationHelper
   def edit_if_owner(article)
-    link_to 'Edit', edit_article_path(article) if current_user == article.author
+    link_to 'Edit', edit_article_path(article) if current_user.admin || current_user == article.author
   end
 
   def categories_menu(categories)

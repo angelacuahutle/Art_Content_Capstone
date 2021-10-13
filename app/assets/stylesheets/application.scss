@@ -87,6 +87,7 @@ $white: #fff;
 .category-articles {
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $dark-gray;
 }
 
 // Article pages styling
@@ -141,4 +142,12 @@ $white: #fff;
 
 .w-25vw {
   width: 25vw;
+}
+
+.footer {
+  background-color: #504e4e;
+  height: 100px;
+  border-bottom: 0px;
+  margin-top: 10px;
+  padding-top: 5px;
 }

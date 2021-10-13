@@ -50,6 +50,8 @@ rails s
 
 Please add the proper credentials in the ```application.yml``` file. Make sure you don't share these with anyone as these are your private keys to access the project's AWS image features.
 
+If you want to edit all articles, PLEASE access as Admin
+
 ### Test the application
 
 You can make sure everything is fine by using the following command:
@@ -58,6 +60,8 @@ rspec
 ```
 
 ### Deployment
+
+Check out the Heroku development deployment [here](https://aqueous-meadow-00203.herokuapp.com/users/sign_in)
 
 ## Authors
 

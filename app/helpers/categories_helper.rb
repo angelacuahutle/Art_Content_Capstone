@@ -22,5 +22,4 @@ module CategoriesHelper
   def read_more(art)
     art.try { |a| a.body.truncate(150, separator: ' ', omission: '... To be continued.') }
   end
-
 end

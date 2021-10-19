@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe VotesController, type: :controller do
   describe 'POST #create' do
-    # expect to 
+    # expect to
   end
 
   describe 'DELETE #destroy' do
-    # expect to 
+    # expect to
   end
 end
 

@@ -9,7 +9,7 @@ module VotesHelper
     end
   end
 
-  def info_of(article)
+  def info_of(_article)
     content_tag :h3, @article.author.name.html_safe
     "Total votes: #{@article.votes.all.count}".html_safe
   end

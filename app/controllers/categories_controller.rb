@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
-    @limited_articles_by_category = @category.articles.limit(4).image.attached
+    @limited_articles_by_category = @category.articles.limit(4)
   end
 
   # GET /categories/new

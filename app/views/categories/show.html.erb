@@ -7,10 +7,11 @@
         <div class="d-flex flex-column">
           <div class="d-flex m-2 p-2 flex-column">
             <%= content_tag :p, @category.name %>
-            <%= content_tag :h2, art.title %>
+            <div class="">
+              <%= content_tag :h2, art.title %>
+            </div>  
             <%= read_more(art) %>
             <%= edit_if_owner(art) %>
-         
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@
  *= require_self
  */
 
-// Color variables
 $dark-orange: #da2d08;
 $medium-orange: #f97210;
 $medium-gray: #a1a1a1;
@@ -21,7 +20,6 @@ $white: #fff;
   src: url('../assets/Montserrat-Regular.ttf') format('truetype');
 }
 
-// Fonts
 .montserrat {
   font-family: montserrat, sans-serif;
 }
@@ -37,7 +35,6 @@ $white: #fff;
     );
 }
 
-// General Settings
 .body {
   font-family: montserrat, sans-serif;
 
@@ -47,7 +44,6 @@ $white: #fff;
   }
 }
 
-// Navbar style
 .dark-gray {
   color: $dark-gray;
 }
@@ -78,8 +74,6 @@ $white: #fff;
   background-color: $medium-orange;
 }
 
-// Grid Styling
-
 .landing-page {
   height: 100vh;
 }
@@ -96,10 +90,8 @@ $white: #fff;
   background-size: cover;
 }
 
-// Article pages styling
 .article-title {
   color: $dark-orange;
-  // add some styling
 }
 
 .article-text {
@@ -131,8 +123,6 @@ $white: #fff;
   font-size: 18px;
 }
 
-// Categories styling
-
 .categories-container {
   height: 94vh;
 }
@@ -143,7 +133,6 @@ $white: #fff;
 
 .bg-cover {
   object-fit: cover;
-  // height: auto;
 }
 
 .w-25vw {
@@ -156,4 +145,9 @@ $white: #fff;
 
 .white {
   color: $white;
+}
+
+.footer {
+  bottom: 0px;
+  position:fixed;
 }

@@ -82,6 +82,7 @@ $white: #fff;
 .landing-grid {
   display: grid;
   grid-template-columns: repeat(4, 25%);
+  height: 42vh;
 }
 
 .category-articles {
@@ -154,8 +155,10 @@ $white: #fff;
   bottom: 0px;
   position:fixed;
   z-index: 1500;
+  width: 100vw;
+  height: 6.85vh;
 }
 
 #landscape {
-  height: 50vh;
+  height: 78vh;
 }

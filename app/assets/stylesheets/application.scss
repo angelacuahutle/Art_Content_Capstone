@@ -1,20 +1,6 @@
-//color
-$dark-orange: #da2d08;
-$medium-orange: #f97210;
-$medium-gray: #a1a1a1;
-$dark-gray: #504e4e;
-$light-gray: #ddd;
-$wood-gray: #8d7868;
-$white: #fff;
-
-@font-face {
-  font-family: 'montserrat';
-  src: url('../assets/Montserrat-Regular.ttf') format('truetype');
-}
-
-// Import Bootstrap
+// Only import libraries
 @import 'bootstrap/scss/bootstrap';
-// Fonts
+
 .montserrat {
   font-family: montserrat, sans-serif;
 }
@@ -30,17 +16,6 @@ $white: #fff;
     );
 }
 
-// General Settings
-.body {
-  font-family: montserrat, sans-serif;
-
-  ul,
-  ol {
-    list-style-type: none;
-  }
-}
-
-// Navbar style
 .dark-gray {
   color: $dark-gray;
 }
@@ -71,21 +46,9 @@ $white: #fff;
   background-color: $medium-orange;
 }
 
-.landing-page {
-  height: 100vh;
-}
-
 .landing-grid {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  height: 50vh;
-  margin-bottom: 0;
-}
-
-.category-articles {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $dark-gray;
 }
 
 .article-title {
@@ -93,41 +56,15 @@ $white: #fff;
 }
 
 .article-text {
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.top {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
-}
-
-.top-title {
-  font-size: 24px;
-  padding: 20px;
-  color: $white !important;
-  text-decoration: none !important;
-}
-
-.category-style {
-  font-weight: bolder;
-  margin: 10px;
-  padding: 10px;
-  color: $white !important;
-}
 
 .top-text {
   color: $white;
   font-size: 18px;
 }
 
-.categories-container {
-  height: 94vh;
-}
-
-.half {
-  height: 50vh;
-}
 
 .bg-cover {
   object-fit: cover;
@@ -137,12 +74,3 @@ $white: #fff;
   width: 25vw;
 }
 
-.footer {
-  background-color: #504e4e;
-  width: 100vw;
-  height: 100px;
-  margin-top: 10px;
-  padding-top: 5px;
-  position: absolute;
-  z-index: 1500;
-}

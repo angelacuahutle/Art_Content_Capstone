@@ -92,7 +92,7 @@ $white: #fff;
 }
 
 .article-text {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .top {
@@ -102,7 +102,7 @@ $white: #fff;
 }
 
 .top-title {
-  font-size: 18p;
+  font-size: 20px;
   color: $white !important;
   text-decoration: none !important;
 }
@@ -113,6 +113,12 @@ $white: #fff;
   margin: 8px;
   padding: 4px;
   color: $white !important;
+}
+
+.most-recent {
+  font-size: 32px;
+  color:$dark-gray;
+  text-decoration: underline;
 }
 
 .top-text {

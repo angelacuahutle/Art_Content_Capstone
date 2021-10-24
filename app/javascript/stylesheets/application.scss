@@ -75,10 +75,6 @@ $white: #fff;
   background-color: $medium-orange;
 }
 
-.landing-page {
-  // height: 100vh;
-}
-
 .landing-grid {
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -106,14 +102,14 @@ $white: #fff;
 }
 
 .top-title {
-  font-size: 18px;
-  padding: 10px;
+  font-size: 18p;
   color: $white !important;
   text-decoration: none !important;
 }
 
 .category-style {
   font-weight: bolder;
+  text-decoration: underline !important;
   margin: 8px;
   padding: 4px;
   color: $white !important;
@@ -126,7 +122,6 @@ $white: #fff;
 
 .categories-container {
   height: 85vh;
-  // height: 94vh;
 }
 
 .half {

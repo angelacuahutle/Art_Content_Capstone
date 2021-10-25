@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <div class="d-flex flex-column position-absolute bottom-0 start-0">
+  <div class="d-flex flex-column">
     <%= content_tag :h2, @article.title, class: 'article-title' %>
+    <%= content_tag :h4, 'by ' + @article.author.name, class: 'article-title' %>
     <%= render partial: "votes" %>
 
-    <% if @article.image.attached? %>
-      <%= image_tag url_for(@article.image), width:'300px' %>
-    <% end %>
+    <% image_attached?(@article) %>
 
     <div class="d-flex flex-column">
       <%= content_tag :p, @article.body, class: 'article-text' %>

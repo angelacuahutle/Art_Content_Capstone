@@ -29,4 +29,8 @@ module ArticlesHelper
   def top_title_link(article)
     link_to(top_title(article), article_path(article), class: 'simple-link top-title m-2 p-2') if article
   end
+
+  def image_attached?(article)
+    image_tag url_for(article.image) if @article.image.attached?
+  end
 end

@@ -1,3 +1,4 @@
+
 // Only import libraries
 @import 'bootstrap/scss/bootstrap';
 
@@ -28,9 +29,7 @@ $white: #fff;
 }
 
 .bg-linear-gradient {
-    background:
-      repeating-linear-gradient
-      (-55deg,
+    background: repeating-linear-gradient(-55deg,
         $light-gray,
         $light-gray 2px,
         $white 2px,

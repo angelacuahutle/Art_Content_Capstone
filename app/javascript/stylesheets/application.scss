@@ -7,7 +7,6 @@
  *= require_self
  */
 
-
 $dark-orange: #da2d08;
 $medium-orange: #f97210;
 $medium-gray: #a1a1a1;
@@ -27,19 +26,20 @@ $white: #fff;
 
 .bg-linear-gradient {
   background:
-    repeating-linear-gradient( -55deg, 
+    repeating-linear-gradient(
+      -55deg,
       $light-gray,
       $light-gray 2px,
       $white 2px,
       $white 4px
-  );
+    );
 }
 
 .body {
   font-family: montserrat, sans-serif;
   height: 100vh;
   overflow: hidden;
-  
+
   ul,
   ol {
     list-style-type: none;
@@ -118,7 +118,7 @@ $white: #fff;
 
 .most-recent {
   font-size: 32px;
-  color:$dark-gray;
+  color: $dark-gray;
   text-decoration: underline;
 }
 
@@ -154,7 +154,7 @@ $white: #fff;
 
 .footer {
   background-color: $dark-gray;
-  bottom: 0px;
+  bottom: 0;
   position: fixed;
   z-index: 1500;
   width: 100vw;

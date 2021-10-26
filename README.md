@@ -58,7 +58,7 @@ You can make sure everything is fine by using the following command:
 ```
 rspec
 ```
-
+ 
 ### Deployment
 
 Check out the Heroku development deployment [here](https://aqueous-meadow-00203.herokuapp.com/users/sign_in)

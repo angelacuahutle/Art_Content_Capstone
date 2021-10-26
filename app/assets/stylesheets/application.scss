@@ -29,11 +29,11 @@ $white: #fff;
 }
 
 .bg-linear-gradient {
-    background: repeating-linear-gradient(-55deg,
-        $light-gray,
-        $light-gray 2px,
-        $white 2px,
-        $white 4px);
+    background: repeating-linear-gradient(-55deg
+    , $light-gray,
+    $light-gray 2px,
+    $white 2px,
+    $white 4px);
   }
 
 .body {

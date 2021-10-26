@@ -8,3 +8,161 @@
  *= require_tree .
  *= require_self
  */
+
+ $dark-orange: #da2d08;
+ $medium-orange: #f97210;
+ $medium-gray: #a1a1a1;
+ $dark-gray: #504e4e;
+ $light-gray: #ddd;
+ $wood-gray: #8d7868;
+ $white: #fff;
+ 
+ @font-face {
+   font-family: 'montserrat';
+   src: url('../assets/Montserrat-Regular.ttf') format('truetype');
+ }
+ 
+ .montserrat {
+   font-family: montserrat, sans-serif;
+ }
+ 
+ .bg-linear-gradient {
+   background:
+     repeating-linear-gradient(
+       -55deg,
+       $light-gray,
+       $light-gray 2px,
+       $white 2px,
+       $white 4px
+     );
+ }
+ 
+ .body {
+   font-family: montserrat, sans-serif;
+   height: 100vh;
+   overflow: hidden;
+   ul,
+   ol {
+     list-style-type: none;
+   }
+ }
+ 
+ .dark-gray {
+   color: $dark-gray;
+ }
+ 
+ .orange-border-bottom {
+   border-bottom: 6px solid $dark-orange !important;
+ }
+ 
+ .simple-list {
+   list-style-type: none !important;
+ }
+ 
+ .simple-link {
+   text-decoration: none !important;
+   color: $dark-gray !important;
+   font-weight: bolder !important;
+ }
+ 
+ .top-rated {
+   background-color: lightblue;
+ }
+ 
+ .bg-dark-orange {
+   background-color: $dark-orange;
+ }
+ 
+ .bg-medium-orange {
+   background-color: $medium-orange;
+ }
+ 
+ .landing-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 25%);
+   height: 42vh;
+ }
+ 
+ .category-articles {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: $dark-gray;
+ }
+ 
+ .article-title {
+   color: $dark-orange;
+ }
+ 
+ .article-text {
+   font-size: 20px;
+ }
+ 
+ .top {
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 44vh;
+ }
+ 
+ .top-title {
+   font-size: 20px;
+   color: $white !important;
+   text-decoration: none !important;
+ }
+ 
+ .category-style {
+   font-weight: bolder;
+   text-decoration: underline !important;
+   margin: 8px;
+   padding: 4px;
+   color: $white !important;
+ }
+ 
+ .most-recent {
+   font-size: 32px;
+   color:$dark-gray;
+   text-decoration: underline;
+ }
+ 
+ .top-text {
+   color: $white;
+   font-size: 18px;
+ }
+ 
+ .categories-container {
+   height: 85vh;
+ }
+ 
+ .half {
+   height: 40vh;
+   // height: 50vh;
+ }
+ 
+ .bg-cover {
+   object-fit: cover;
+ }
+ 
+ .w-25vw {
+   width: 25vw;
+ }
+ 
+ .medium-orange {
+   color: $medium-orange;
+ }
+ 
+ .white {
+   color: $white;
+ }
+ 
+ .footer {
+   background-color: #504e4e;
+   bottom: 0px;
+   position:fixed;
+   z-index: 1500;
+   width: 100vw;
+   height: 6.85vh;
+ }
+ 
+ #landscape {
+   height: 78vh;
+ }
+ 

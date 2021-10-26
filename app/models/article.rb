@@ -14,5 +14,4 @@ class Article < ApplicationRecord
     article_id = Vote.group(:article_id).count.max_by { |_, v| v }.first
     Article.find(article_id)
   end
-
 end

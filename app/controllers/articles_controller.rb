@@ -1,11 +1,20 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    @top = Article.top_article
     @categories = Category.order(:priority).limit(4).includes(:articles)
   end
 
+  def new
+    @article = Article.new
+  end
+
+  def show
+    set_article
+  end
+
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
 
     respond_to do |format|
       if @article.save
@@ -45,6 +54,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :category_id, :image).merge(author_id: @current_user.id)
+    params.require(:article).permit(:title, :body, :category_id, :image)
   end
 end

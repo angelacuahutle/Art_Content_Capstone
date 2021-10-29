@@ -1,19 +1,22 @@
-<h1>Art Content</h1>
-<p>Hola Amigx!</p>
-<div class="landing-grid">
-  <% @articles.each do |article| %>
-    <li>
-      <%= article.title %>
-    </li>
-  <% end %>
-</div>
-
-<div class="landing-grid">
-  <% @categories.each do |category| %>
-    <div class='category-articles' %>
+<main class="landing-page">
+  <p id="notice" class="p-0 m-0"><%= notice %></p>
+  <div class="" id="landscape">
+    <div class="top d-flex flex-column justify-content-end" style="background-image: linear-gradient(rgba(232, 199, 192,.2), rgba(232, 199, 192,.2)), url(<%= top_image(@top) %>);">
       <div class="">
+        <%= top_title_link(@top) %>
       </div>
+      <p class="top-text d-flex align-items-baseline"><%= top_content(@top) %></p>
     </div>
-  <% end %>
-</div>
-
+    <div class="landing-grid">
+  <% @categories.each do |category| %>
+        <div class='category-articles d-flex flex-column'
+              style="background-image: linear-gradient(rgba(232, 199, 192,.1), rgba(232, 199, 192,.1)), url(<%= latest_article_cover(category) %>);">
+          <div class="d-flex flex-column mb-4 pb-4 justify-content-between h-100">
+            <%= link_to category.name, category_path(category), class:'category-style simple-link text-uppercase text-decoration-underline' %>
+            <span><%= article_by_category(category) %></span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>

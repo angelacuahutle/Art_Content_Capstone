@@ -1,17 +1,14 @@
-<nav class="gradient-custom border">
-  <ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="http://localhost:3000">Homepage</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" target="_blank">Bootstrap doc</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-    <%= button_to "logout", destroy_user_session_path, method: :delete  %>
-  </ul>
+<nav class="d-flex w-100 h-100 justify-content-between align-items orange-border-bottom h-100 px-4 mb-0 pb-0">
+  <h1><%= link_to 'Art Content', articles_path, class:'title montserrat dark-gray simple-link' %></h1>
+  <h3><%= link_to 'New Article +', new_article_path, class: 'd-flex align-items-center simple-link mt-2 p-0' %></h3>
+
+  <div class="d-flex justify-content-around mx-4 px-4">
+    <%= categories_menu(@top_categories) %>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center m-0 p-0">
+    <ul class="d-flex align-items-center m-0 p-0 simple-list">
+      <%= navbar(current_user) %>
+    </ul>
+  </div>
 </nav>

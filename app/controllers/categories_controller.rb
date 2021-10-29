@@ -7,7 +7,9 @@ class CategoriesController < ApplicationController
   end
 
   # GET /categories/1 or /categories/1.json
-  def show; end
+  def show
+    @limited_articles_by_category = @category.articles.most_recent_top4
+  end
 
   # GET /categories/new
   def new

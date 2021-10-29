@@ -1,6 +1,6 @@
 module ArticlesHelper
-  def display_articles_by_category
-    @categories.each do |category|
+  def display_articles_by_category(categories)
+    categories.each do |category|
       content_tag(:div,
         class:'category-articles d-flex flex-column',
         style:"

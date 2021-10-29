@@ -12,7 +12,6 @@ RSpec.describe VotesController, type: :controller do
     it 'creates vote for article' do
       post :create, params: { article_id: article.id, user_id: user.id }
       expect(response).to be_successful
-
     end
   end
 

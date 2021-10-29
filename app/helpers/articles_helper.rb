@@ -7,7 +7,7 @@ module ArticlesHelper
                     url(#{latest_article_cover(category)});") do
         content_for(:div, class: 'd-flex flex-column mb-4 pb-4 justify-content-between h-100') do
           link_to category.name, category_path(category),
-            class: 'category-style simple-link text-uppercase text-decoration-underline'
+                  class: 'category-style simple-link text-uppercase text-decoration-underline'
           content_for(:span, article_by_category(category))
         end
       end

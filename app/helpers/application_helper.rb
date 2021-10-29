@@ -1,4 +1,17 @@
 module ApplicationHelper
+
+  def navbar(current_user)
+     if current_user.nil? 
+      content_tag(:li, link_to('Log in', new_user_session_path, class:'mr-2 simple-link'))
+      content_tag(:span, class:"mx-2 font-weight-bold")
+      content_tag(:li, link_to('Sign up', new_user_session_path, class:'mr-2 simple-link'))
+     else 
+      content_tag(:li, current_user.name, class:' mr-4 p-1') 
+      content_tag(:li, link_to('Log out',  destroy_user_session_path, method: :delete))
+     end 
+
+  end
+
   def edit_if_owner(article)
     link_to 'Edit', edit_article_path(article) if current_user.admin || current_user == article.author
   end

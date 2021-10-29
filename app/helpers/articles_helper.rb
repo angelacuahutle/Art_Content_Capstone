@@ -1,4 +1,18 @@
 module ArticlesHelper
+  def display_articles_by_category
+    @categories.each do |category|
+      content_tag(:div,
+        class:'category-articles d-flex flex-column',
+        style:"
+          background-image: linear-gradient(rgba(232, 199, 192,.1), rgba(232, 199, 192,.1)),
+          url(<%= latest_article_cover(category) %>);"
+                 )
+      content_tag(:div, class:"d-flex flex-column mb-4 pb-4 justify-content-between h-100")
+      link_to category.name, category_path(category), class:'category-style simple-link text-uppercase text-decoration-underline'
+      content_tag(:span, article_by_category(category))
+    end
+  end
+
   def top_title(article)
     article.try(:title)
   end

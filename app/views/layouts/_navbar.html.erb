@@ -8,16 +8,7 @@
 
   <div class="d-flex justify-content-center align-items-center m-0 p-0">
     <ul class="d-flex align-items-center m-0 p-0 simple-list">
-      <% if current_user.nil? %>
-        <li><%= link_to 'Log in', new_user_session_path, class:'mr-2 simple-link' %></li>
-        <span class="mx-2 font-weight-bold">|</span>
-        <li><%= link_to 'Sign up', new_user_session_path, class:'mr-2 simple-link' %></li>
-      <% else %>
-        <%= content_tag :li, current_user.name, class:' mr-4 p-1' %>
-        <li>
-          <%= link_to 'Log out',  destroy_user_session_path, method: :delete %>
-        </li>
-      <% end %>
+      <% navbar(current_user) %>
     </ul>
   </div>
 </nav>
